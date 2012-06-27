@@ -3,7 +3,10 @@ var Locaweb = {
 		$("#repositories").append("<thead><tr><th>Project</th><th>Description</th></tr></thead>");
 		for(var index in response.data) {
 			var datum = response.data[index];
-			$("#repositories").append("<tr><td class='txtLeft'>"+datum.name+"</td>"+"<td class='txtLeft'>"+datum.description+"</td></tr>");
+			$("#repositories").append(
+			    "<tr><td class='txtLeft'><a href='" + datum.html_url + "'>" + 
+			    datum.name + "</a></td><td class='txtLeft'>" + datum.description + "</td></tr>"
+			);
 		}
 	},
 
