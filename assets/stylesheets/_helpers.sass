@@ -1,0 +1,43 @@
+// VARIABLES
+$color_white: #FFF
+$color_gray: #888
+$color_orange: #ca3c3c
+
+// HELPER CLASSES
+.os-text-center
+  text-align: center
+
+.os-text-right
+  text-align: right
+
+.os-text-left
+  text-align: left
+
+@-webkit-keyframes shaking-arrow
+  from
+    background-position: center 50%
+  to
+    background-position: center 10px
+
+.os-title-2
+  font-weight: 700
+  text-align: center
+  font-size: 26px
+  position: relative
+  text-transform: uppercase
+
+.os-title-border:after
+  content: ""
+  background: #ccc
+  height: 4px
+  width: 45px
+  margin: 10px auto
+  display: block
+
+
+////
+// Mobile Version
+////
+@media only screen and (max-width: 780px)
+  .os-title-2
+    font-size: 20px

@@ -1,0 +1,196 @@
+// header
+.os-header
+  background: #BC292F url('../images/bg-header.jpg') no-repeat center
+  background-size: cover
+  color: $color_white
+  text-transform: uppercase
+
+  .os-logo
+    float: left
+    padding: 15px 0 0
+
+    a
+      width: 134px
+      height: 31px
+      background: url('../images/logo-locaweb.png') no-repeat
+      background-size: contain
+      text-indent: -999999px
+      overflow: hidden
+      display: inherit
+
+  h2
+    margin: 17px 0 0 15px
+    float: left
+    font-size: 20px
+    font-weight: 400
+    border-left: 1px solid rgba($color_white, .2)
+    padding-left: 15px
+
+  hr
+    clear: both
+    background: none
+    border: none
+    border-top: 1px solid rgba($color_white, .2)
+    height: 1px
+
+  .os-highlight
+    text-align: center
+    padding: 155px 0 220px
+    position: relative
+
+    h1
+      letter-spacing: -4px
+      font-size: 95px
+      font-weight: 700
+      position: relative
+      span
+        font-weight: 300
+
+    p
+      text-transform: none
+      font-size: 32px
+      font-weight: 300
+      position: relative
+
+    .os-button-arrow
+      border-radius: 100%
+      display: inline-block
+      width: 50px
+      height: 50px
+      border: 2px solid $color_white
+      background: url('../images/button-arrow.png') no-repeat center
+      position: absolute
+      bottom: 50px
+      left: 50%
+      margin-left: -29px
+
+      &:hover
+        -webkit-animation: shaking-arrow .25s linear infinite alternate
+
+.os-menu
+  float: right
+  font-size: 0
+
+  .os-menu-sandwich,
+  input[type="checkbox"]
+    display: none
+  
+  li
+    list-style: none
+    display: inline-block
+    font-size: 14px
+    padding-left: 60px
+
+    a
+      font-weight: 600
+      color: $color_white
+      text-decoration: none
+      display: inline-block
+      padding: 20px 0
+      transition: box-shadow .1s linear
+
+      &:hover
+        box-shadow: 0 -4px 0 #FFF inset
+
+////
+// Mobile Version
+////
+@media only screen and (max-width: 780px)
+  .os-header
+    position: relative
+
+    .os-highlight
+      padding: 20px 0
+      position: relative
+
+      h1
+        font-size: 40px
+        line-height: 1
+        letter-spacing: 0px
+
+        span
+          display: block
+
+      p
+        font-size: 15px
+        padding: 10px
+
+      .os-button-arrow
+        display: none
+        border-width: 1px
+        width: 30px
+        height: 30px
+        bottom: 20px
+        margin-left: -15px
+
+    .os-logo
+      margin-bottom: 15px
+      a
+        width: 80px
+        height: 20px
+
+    h2
+      font-size: 12px
+      margin-left: 5px
+      padding-left: 5px
+
+  .os-menu
+    width: 35px
+    height: 35px
+    margin: 10px -5px 0 0px
+
+    .os-menu-sandwich
+      display: block
+      border-radius: 3px
+      color: rgba(255, 255, 255, .7)
+      font: bold 20px/1 Arial
+      border: 1px solid rgba(255, 255, 255, .7)
+      text-align: center
+      padding: 5px
+      position: absolute
+      top: 10px
+      right: 10px
+      cursor: pointer
+      width: inherit
+      height: inherit
+
+    input[type="checkbox"]
+      position: absolute
+      top: 4px
+      right: 3px
+      z-index: 1
+      opacity: 0
+      cursor: pointer
+      display: block
+      height: inherit
+      width: inherit
+
+      &:checked ~ ul
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+
+    ul
+      background: #fff
+      padding: 5px 20px
+      position: absolute
+      top: 50px
+      right: 0
+      z-index: 1
+      -webkit-transform: translateX(100%)
+      transform: translateX(100%)
+      -webkit-transition: -webkit-transform .15s ease-in
+      transition: transform .15s ease-in
+
+      li
+        padding: 0
+        display: block
+        &:last-child a
+          border-bottom: none
+      a
+        font-size: 12px
+        padding: 10px
+        border-bottom: 1px solid rgba(0, 0, 0, .2)
+        color: #000
+        display: block
+
+

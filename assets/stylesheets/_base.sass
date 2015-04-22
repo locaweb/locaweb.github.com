@@ -1,0 +1,337 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+canvas
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+body
+  font-size: 100%
+  font-family: 'Open Sans', sans-serif
+  overflow-X: hidden
+
+.os-container
+  max-width: 1140px
+  margin: 0 auto
+  padding: 0 15px
+
+.os-icons
+  background: url('../images/icons-sprite.png') no-repeat
+  padding-left: 15px
+
+  &.os-stars
+    background-position: 0 -11px
+
+  &.os-forks
+    background-position: 0 4px
+
+.os-social
+  border-radius: 100%
+  border: 3px solid $color_white
+  text-indent: -999999px
+  overflow: hidden
+  display: inherit
+
+.os-btn
+  text-align: center
+  background: $color_white
+  padding: 14px 30px 10px
+  border: 3px solid #ccc
+  text-decoration: none
+  color: #000
+  text-transform: uppercase
+  font-size: 14px
+
+  &:hover
+    background: #CCC
+
+// mini-banner
+.os-mini-banner
+  background: #ca3c3c
+  color: $color_white
+  text-align: center
+  padding: 30px 0
+
+  div
+    display: inline-block
+    vertical-align: middle
+    max-width: 40%
+    text-align: left
+    padding: 50px 3%
+
+    h2, p
+      font-weight: 300
+      overflow: hidden
+
+    h2
+      font-size: 28px
+    p
+      font-size: 15px
+      max-width: 480px
+
+    img
+      float: left
+      padding-right: 25px
+
+    &:first-child
+      text-align: right
+      padding-right: 3%
+      border-right: 1px solid rgba($color_white, .2)
+
+      img
+        float: right
+        padding-left: 25px
+        padding-right: 0
+
+.os-section
+  padding-top: 80px
+  padding-bottom: 80px
+  text-align: center
+
+// feature projects
+.os-featured-projects
+
+  p
+    margin: 15px 0
+
+  ul
+    margin-top: 50px
+
+  li
+    list-style: none
+    display: inline-block
+    width: 33%
+    padding: 0 2%
+    margin-bottom: 65px
+    vertical-align: top
+
+    a
+      text-decoration: none
+      display: block
+
+      &:hover
+        opacity: .8
+
+    h3
+      color: $color_orange
+      font-size: 20px
+      font-weight: 400
+
+    span, p
+      color: $color_gray
+      font-size: 14px
+      font-weight: 300
+
+    span
+      font-size: 12px
+      font-weight: 700
+      margin-right: 12px
+
+      & + .os-icons
+        margin-right: 5px
+
+    date
+      color: $color_gray
+      font-size: 12px
+      font-weight: 300
+
+// developers
+.os-developers
+  background: #ecf0f1
+
+  .os-btn
+    display: block
+    width: 276px
+    margin: 0 auto
+
+  ul
+    padding: 50px 0
+
+  li
+    list-style: none
+    width: 22%
+    margin-bottom: 60px
+    display: inline-block
+    vertical-align: top
+    text-align: left
+    margin-right: 3%
+
+    a
+      text-decoration: none
+      overflow: hidden
+
+    img
+      float: left
+      width: 89px
+      border-radius: 100%
+      border: 3px solid $color_white
+      margin-right: 10px
+
+    strong
+      display: block
+      color: $color_orange
+      font-size: 17px
+      font-weight: 600
+      padding-top: 20px
+      overflow: hidden
+
+    span
+      display: block
+      color: $color_gray
+      font-size: 13px
+      font-weight: 300
+      padding-bottom: 15px
+      overflow: hidden
+
+    .os-social 
+      display: none
+
+.os-stats
+
+  li
+    list-style: none
+    display: inline-block
+    vertical-align: top
+    text-align: center
+    font-size: 16px
+    font-weight: 300
+    width: 274px
+
+    strong
+      font-size: 48px
+      font-weight: 700
+      display: block
+      color: $color_orange
+
+
+.os-footer
+  clear: both
+  padding: 10px 0
+  background: #222222
+  margin-top: 80px
+
+  .os-section + &
+    margin-top: 0
+
+  .os-social-link
+    list-style: none
+    float: right
+    padding-top: 10px
+
+    li
+      display: inline-block
+      margin-left: 5px
+
+    a
+      background: url('../images/social-icons.png') no-repeat center
+      text-indent: -999999px
+      overflow: hidden
+      display: inherit
+      width: 28px
+      height: 28px
+
+      &.os-social-facebook
+        background-position: 0 -1px
+
+      &.os-social-gplus
+        background-position: -76px -1px
+
+  .os-logo-footer
+    vertical-align: middle
+    padding: 10px 15px 10px 0
+    display: inline-block
+    border-right: 1px solid rgba($color_white, .15)
+
+  .os-copyright
+    font-size: 11px
+    display: inline-block
+    vertical-align: middle
+    padding: 0 10px
+    color: rgba($color_white, .6)
+
+////
+// Mobile Version
+////
+@media only screen and (max-width: 780px)
+  html, body
+    overflow-X: hidden
+
+  .os-mini-banner
+    display: none
+
+  .os-section
+    padding: 40px 0
+
+  .os-featured-projects
+    li
+      display: block
+      width: auto
+      margin: 0 20px 35px
+      padding-bottom: 35px
+      border-bottom: 1px solid rgba(0, 0, 0, .1)
+
+      &:last-child
+        border-bottom: none
+
+  .os-developers
+    ul
+      padding: 15px 0
+
+    li
+      display: inline-block
+      width: 45%
+      padding: 20px 5% 20px 0
+      margin: 0
+      text-align: center
+
+      strong
+        font-size: 13px
+        padding-top: 5px
+
+      span
+        font-size: 11px
+        padding: 0
+
+      img
+        width: 70px
+        margin: 0
+        float: none
+
+      &:nth-child(2),
+      &:first-child
+        padding-top: 0
+        border-top: none
+
+      &:nth-child(even)
+        padding-right: 0
+
+  .os-stats li
+    padding: 20px
+    list-style: none
+    width: 154px 
+
+  .os-footer
+    margin-top: 0
+    padding-bottom: 10px
+    text-align: center
+
+    .os-logo-footer
+      border: none
+      padding: 10px 0
+
+    .os-copyright
+      font-size: 10px
+      padding: 10px
+
+    .os-social-link
+      float: none
+
+  .os-btn
+    font-size: 12px
