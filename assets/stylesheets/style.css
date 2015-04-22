@@ -95,6 +95,9 @@ body {
     .os-mini-banner div h2, .os-mini-banner div p {
       font-weight: 300;
       overflow: hidden; }
+      .os-mini-banner div h2 a, .os-mini-banner div p a {
+        color: #fff;
+        text-decoration: none; }
     .os-mini-banner div h2 {
       font-size: 28px; }
     .os-mini-banner div p {
