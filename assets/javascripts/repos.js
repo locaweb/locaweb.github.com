@@ -22,7 +22,7 @@ locaweb_ops.repos = (function() {
         return +b - a;
       });
 
-      for (var i = 0; i < 9; i++) {
+      for (var i = 0; i < Math.min(9, repos.length); i++) {
         template = '<li>';
         template += '<a target="_blank" href="' + repos[i].page + '"><h3>' + repos[i].name + '</h3>';
         template += '<span>' + repos[i].language + '</span>';
