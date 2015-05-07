@@ -16,12 +16,13 @@ locaweb_ops.repos = (function() {
         repos.push({'pushed_at': val.pushed_at, 'name': val.name, 'forks': val.forks, 'watchers': val.watchers, 'page': val.html_url, 'language': val.language, 'description': val.description});
       });
 
-      repos.sort( function(obj1, obj2) {
-        return obj1.pushed_at > obj2.pushed_at;
+      repos.sort(function(obj1, obj2) {
+        var a = new Date(obj1.pushed_at),
+            b = new Date(obj2.pushed_at);
+        return +b - a;
       });
 
       for (var i = 0; i < 9; i++) {
-        repos.reverse();
         template = '<li>';
         template += '<a target="_blank" href="' + repos[i].page + '"><h3>' + repos[i].name + '</h3>';
         template += '<span>' + repos[i].language + '</span>';
