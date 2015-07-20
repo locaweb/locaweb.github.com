@@ -32,7 +32,7 @@ locaweb_ops.repos = (function() {
         template += '</li>';
         $('#repos').append(template);
       };
-  
+
       $("date.timeago").timeago();
       $("#os-stats-projects").text(repos.length)
 
