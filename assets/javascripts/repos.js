@@ -25,8 +25,8 @@ locaweb_ops.repos = (function() {
         template = '<li>';
         template += '<a target="_blank" href="' + repos[i].page + '"><h3>' + repos[i].name + '</h3>';
         template += '<span>' + repos[i].language + '</span>';
-        template += '<span class="os-icons os-stars">' + repos[i].forks + '</span>';
-        template += '<span class="os-icons os-forks">' + repos[i].watchers + '</span>';
+        template += '<span class="os-icons os-stars">' + repos[i].watchers + '</span>';
+        template += '<span class="os-icons os-forks">' + repos[i].forks + '</span>';
         template += '<p>' + repos[i].description + '</p>';
         template += '<date class="timeago" title="' + repos[i].pushed_at + '"></date></a>';
         template += '</li>';
