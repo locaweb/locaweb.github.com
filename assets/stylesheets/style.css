@@ -322,8 +322,8 @@ body {
     .os-header .os-logo a {
       width: 134px;
       height: 31px;
-      background: url("../images/logo-locaweb.png") no-repeat;
-      background-size: contain;
+      background: url("../images/logo-locaweb.png") no-repeat center;
+      background-size: cover;
       text-indent: -999999px;
       overflow: hidden;
       display: inherit; }
