@@ -16,23 +16,24 @@ locaweb_ops.repos = (function() {
         repos.push({'pushed_at': val.pushed_at, 'name': val.name, 'forks': val.forks, 'watchers': val.watchers, 'page': val.html_url, 'language': val.language, 'description': val.description});
       });
 
-      repos.sort( function(obj1, obj2) {
-        return obj1.pushed_at > obj2.pushed_at;
+      repos.sort(function(obj1, obj2) {
+        var a = new Date(obj1.pushed_at),
+            b = new Date(obj2.pushed_at);
+        return +b - a;
       });
 
-      for (var i = 0; i < 9; i++) {
-        repos.reverse();
+      for (var i = 0; i < Math.min(9, repos.length); i++) {
         template = '<li>';
         template += '<a target="_blank" href="' + repos[i].page + '"><h3>' + repos[i].name + '</h3>';
         template += '<span>' + repos[i].language + '</span>';
-        template += '<span class="os-icons os-stars">' + repos[i].watchers + '</span>';
-        template += '<span class="os-icons os-forks">' + repos[i].forks + '</span>';
+        template += '<span class="os-icons os-stars">' + repos[i].forks + '</span>';
+        template += '<span class="os-icons os-forks">' + repos[i].watchers + '</span>';
         template += '<p>' + repos[i].description + '</p>';
         template += '<date class="timeago" title="' + repos[i].pushed_at + '"></date></a>';
         template += '</li>';
         $('#repos').append(template);
       };
-
+  
       $("date.timeago").timeago();
       $("#os-stats-projects").text(repos.length)
 
